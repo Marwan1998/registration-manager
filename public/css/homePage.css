@@ -1,0 +1,17 @@
+@import "./general.css";
+
+.heading{
+    /* text-align: center; */
+    padding-top: 1rem;
+}
+
+.rowEdited {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.mainDiv{
+
+}

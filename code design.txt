@@ -1,0 +1,13 @@
+    <div class="container selectNone">
+      <div class="row justify-content-center mt-5">
+          <div class="col-md-5">
+              <form class="text-center border border-light p-5" action="#!">
+                  <p class="h4 mb-4">Sign in</p>
+                  <input type="text" class="form-control mb-4" name="username" placeholder="Username">
+                  <input type="password" class="form-control mb-4" name="password" placeholder="Password">
+                  <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+                  <p>Not a member? <a href="">Register</a></p>
+              </form>
+          </div>
+      </div>
+  </div>
