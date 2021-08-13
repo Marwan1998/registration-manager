@@ -3,6 +3,7 @@
 .heading{
     /* text-align: center; */
     padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .rowEdited {
@@ -14,4 +15,13 @@
 
 .mainDiv{
 
+}
+
+.cursor{
+    cursor: auto;
+}
+
+.fitDiv{
+    width: 100%;
+    height: 100%;
 }
