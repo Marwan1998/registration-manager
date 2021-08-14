@@ -53,28 +53,28 @@
     <div class="text-center selectNone">
         <form id="formData" class="position-absolute top-50 start-50 translate-middle" method="POST">
             <div class="input-group mb-3">
-                <span class="input-group-text bg-info"><p class="leb">Website name</p></span>
-                <input type="text" name="webnam" class="form-control" id="webnam" autocomplete="off" placeholder="Website name" />
+                <span><p class="leb">Website name</p></span>
+                <input id="webnam" placeholder="Website name"/>
             </div>
             <div class="input-group mb-3">
-                <span class="input-group-text bg-info"><p class="leb">Username</p></span>
-                <input type="text" name="name" class="form-control" id="name" autocomplete="off" placeholder="Username" />
+                <span><p class="leb">Username</p></span>
+                <input id="name" placeholder="Username"/>
             </div>
             <div class="input-group mb-3">
-                <span class="input-group-text bg-info"><p class="leb">Email</p></span>
-                <input type="text" name="email" class="form-control" id="email" autocomplete="off" placeholder="Email Address" />
+                <span><p class="leb">Email</p></span>
+                <input id="email" placeholder="Email Address"/>
             </div>
             <div class="input-group mb-3">
-                <span class="input-group-text bg-info"><p class="leb">Password</p></span>
-                <input type="text" name="pass" class="form-control" id="pass" autocomplete="off" placeholder="Password" />
+                <span><p class="leb">Password</p></span>
+                <input id="pass" placeholder="Password"/>
             </div>
             <div class="input-group mb-3">
-                <span class="input-group-text bg-info"><p class="leb">Country</p></span>
-                <input type="text" name="country" class="form-control" id="country" autocomplete="off" placeholder="Country Name" />
+                <span><p class="leb">Country</p></span>
+                <input id="country" placeholder="Country Name"/>
             </div>
             <div class="input-group mb-3">
-                <span class="input-group-text bg-info"><p class="leb">Phone</p></span>
-                <input type="text" name="phone" class="form-control" id="phone" autocomplete="off" placeholder="Phone Number" />
+                <span><p class="leb">Phone</p></span>
+                <input id="phone" placeholder="Phone Number"/>
             </div>
             <br>
             <button type="submit" class="btn bg-primary btn-lg fitDiv" name="button">Add Register</button>
@@ -100,9 +100,15 @@
         </div>
     </footer>
     <script>
-        //TODO: loops thgtrow all inputs and set autocomplete="off", classes, aria-describedby,
-        
+        document.querySelectorAll('input').forEach((input, index) => {
+            input.className = "form-control";
+            input.type = "text";
+            input.name = input.id;
+            input.autocomplete = "off";
+            (index <= 5) ? input.required = 'required' : null;
+            // if(index <= 5) input.required = 'required';
+        });
+        document.querySelectorAll("span").forEach(span => span.className = "input-group-text bg-info");
     </script>
 </body>
-
 </html>
