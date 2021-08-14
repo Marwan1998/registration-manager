@@ -8,3 +8,7 @@ body {
     user-select: none;
 }
 
+.fitDiv{
+  width: 100%;
+  height: 100%;
+}
