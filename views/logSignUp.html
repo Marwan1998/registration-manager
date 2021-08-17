@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Log in</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
-      crossorigin="anonymous"/>
-    <link rel="stylesheet" href="/public/css/startPage.css" />
-    <link rel="stylesheet" href="/public/css/footer.css">
-    <link type="css" rel="stylesheet" href="/public/css/icons/">
-  </head>
 
-  <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-light rounded selectNone"
-      aria-label="Eleventh navbar example">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log in</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/public/css/startPage.css" />
+  <link rel="stylesheet" href="/public/css/footer.css">
+  <link type="css" rel="stylesheet" href="/public/css/icons/">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded selectNone" aria-label="Eleventh navbar example">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">RegMan</a>
+        <a class="navbar-brand" href="#">RegMang</a>
         <div class="collapse navbar-collapse" id="navbarsExample09">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           </ul>
@@ -33,58 +30,41 @@
         </div>
       </div>
     </nav>
+  </header>
 
-    <div class="mainContainer text-center">
-      <form class="form-signin">
-        <img
-          class="mb-4"
-          src="/public/images/login-berufsbildung.svg"
-          alt=""
-          width="72"
-          height="72"
-        />
-        <h1 class="h3 mb-3 font-weight-normal selectNone">Please sign in</h1>
-        <input
-          type="text"
-          id="inputEmail"
-          class="form-control"
-          placeholder="username"
-          required
-          autofocus
-        />
-        <input
-          type="password"
-          id="inputPassword"
-          class="form-control"
-          placeholder="Password"
-          required
-        />
-        <br />
-        <button class="btn btn-lg btn-primary btn-block" type="submit">
-          Sign in
-        </button>
-      </form>
+  <div class="mainContainer text-center">
+    <form class="form-signin">
+      <img class="mb-4" src="/public/images/login-berufsbildung.svg" alt="" width="72" height="72" />
+      <h1 class="h3 mb-3 font-weight-normal selectNone">Please sign in</h1>
+      <input type="text" id="inputEmail" class="form-control" placeholder="username" required autofocus />
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required />
+      <br />
+      <button class="btn btn-lg btn-primary btn-block" type="submit">
+        Sign in
+      </button>
+    </form>
+  </div>
+
+  <footer class="footer-distributed">
+    <div class="footer-right">
+      <!-- TODO: add or extract the fa class and delete other fornt awesome files -->
+      <a href="https://www.facebook.com/people/Marwan-Alghadi/100010510052186/">
+        <em class="fa fa-facebook"></em></a>
+      <a href="https://ly.linkedin.com/in/marwan-algadi-445a151a3">
+        <em class="fa fa-linkedin"></em></a>
+      <a href="https://github.com/Marwan1998/characters">
+        <em class="fa fa-github"></em></a>
     </div>
-
-    <footer class="footer-distributed">
-      <div class="footer-right">
-        <!-- TODO: add or extract the fa class and delete other fornt awesome files -->
-        <a href="https://www.facebook.com/people/Marwan-Alghadi/100010510052186/">
-          <em class="fa fa-facebook"></em></a>
-        <a href="https://ly.linkedin.com/in/marwan-algadi-445a151a3">
-          <em class="fa fa-linkedin"></em></a>
-        <a href="https://github.com/Marwan1998/characters">
-          <em class="fa fa-github"></em></a>
-      </div>      
-      <!-- class="copyRigth" -->
-      <div class="footer-left">
-        <p class="footer-links">
-          <a class="link-1" href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-        </p>
+    <!-- class="copyRigth" -->
+    <div class="footer-left">
+      <p class="footer-links">
+        <a class="link-1" href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </p>
       <p>Characters &copy; 2021</p>
-      </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
+
 </html>
