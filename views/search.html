@@ -12,6 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/public/css/search.css">
+    <link rel="stylesheet" href="/public/css/general.css">
     <link rel="stylesheet" href="/public/css/footer.css" />
     <link type="css" rel="stylesheet" href="/public/css/icons/" />
   </head>
@@ -45,27 +46,19 @@
     </header>
 <br><br><br><br>
 
-<!-- <div class="search-div">
-    <nav class="bg-light" aria-labelledby="">
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-          <button class="btn btn-outline-success my-2 my-sm-2" type="submit"> Search </button>
-        </form></nav></div> -->
-
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-            <div id="myDropdown" class="dropdown-content">
-              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()" >
-              <a href="#about">About</a>
-              <a href="#base">Base</a>
-              <a href="#blog">Blog</a>
-              <a href="#contact">Contact</a>
-              <a href="#custom">Custom</a>
-              <a href="#support">Support</a>
-              <a href="#tools">Tools</a>
-            </div>
-          </div>
-
+<form method="POST">
+<div class="dropdown selectNone">
+    <button type="button" onclick="myFunction()" class="btn btn-outline-success my-2 my-sm-2">Dropdown</button>
+    <div id="myDropdown" class="dropdown-content">
+      <input type="text" placeholder="Search.." id="myInput" autocomplete="off" onkeyup="filterFunction()" >
+      <!-- <button class="costomBtn fitDiv">About</button>
+      <button class="costomBtn fitDiv">Base</button>
+      <button class="costomBtn fitDiv">Blog</button>
+      <button class="costomBtn fitDiv">Contact</button>
+      <button class="costomBtn fitDiv">Custom</button> -->
+    </div>
+  </div>
+</form>
           
 
     <footer class="footer-distributed">
@@ -94,21 +87,30 @@
 
     <script>
 
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
+
+// this array must be sent from te DB
+let data = ['About', 'Base', 'Blog', 'Contact', 'Custom', 'Support', 'Tools'];
+
+let myDropdown = document.getElementById("myDropdown");
+for (const item of data) {
+  let a = document.createElement('a');
+  a.innerText = item;
+  myDropdown.appendChild(a);
 }
 
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+let myFunction = () => document.getElementById("myDropdown").classList.toggle("show");
+
 function filterFunction() {
-  var input, filter, ul, li, a, i;
+  let input, filter, ul, li, a, i;
   input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
+  filter = input.value.toLowerCase();
   div = document.getElementById("myDropdown");
   a = div.getElementsByTagName("a");
   for (i = 0; i < a.length; i++) {
     txtValue = a[i].textContent || a[i].innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+    if (txtValue.toLowerCase().indexOf(filter) > -1) {
       a[i].style.display = "";
     } else {
       a[i].style.display = "none";
