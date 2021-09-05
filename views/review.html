@@ -2,73 +2,132 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Find</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
-  <link rel="stylesheet" href="/public/css/search.css">
-  <link rel="stylesheet" href="/public/css/general.css">
-  <link rel="stylesheet" href="/public/css/footer.css" />
-  <link type="css" rel="stylesheet" href="/public/css/icons/" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="/public/css/review.css"> -->
+    <link rel="stylesheet" href="/public/css/general.css" />
+    <link rel="stylesheet" href="/public/css/footer.css" />
+    <link type="css" rel="stylesheet" href="/public/css/icons/" />
+    <style>
+        .marg.footer-distributed {
+            margin-top: 0;
+        }
+
+        .leb {
+            margin-bottom: 0px;
+            font-size: 17px;
+            width: 110px;
+        }
+        .size{
+            width: 45%;
+        }
+        .left{
+            margin-left: 0;
+        }
+        .para{
+            /* margin-left: 7px !important; */
+            border: solid;
+            border-width: 1px 1px 1px 1px;
+            /* user-select: all; TODO: uncomment this lettar */
+        }
+    </style>
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded selectNone" aria-label="Eleventh navbar example">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">RegMang</a>
-        <div class="collapse navbar-collapse" id="navbarsExample09">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-          </ul>
-          <li class="navbar-nav nav-item about">
-            <a class="nav-link" href="#">New</a>
-          </li>
-          <li class="navbar-nav nav-item about">
-            <a class="nav-link" href="#">Find</a>
-          </li>
-          <li class="navbar-nav nav-item about">
-            <a class="nav-link" href="#">Logout</a>
-          </li>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded selectNone"
+            aria-label="Eleventh navbar example">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">RegMang</a>
+                <div class="collapse navbar-collapse" id="navbarsExample09">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                    </ul>
+                    <li class="navbar-nav nav-item about">
+                        <a class="nav-link" href="#">New</a>
+                    </li>
+                    <li class="navbar-nav nav-item about">
+                        <a class="nav-link" href="#">Find</a>
+                    </li>
+                    <li class="navbar-nav nav-item about">
+                        <a class="nav-link" href="#">Logout</a>
+                    </li>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <br/>
+
+<div class="container left">
+    <h2 class="text-center">Website Name</h2><br/>
+    <div class="row row-cols-1 row-cols-md-2">
+        <div class="col size">
+            <div class="input-group card-body">
+                <span><p class="leb">Website name</p></span>
+                <p class="para">Website name</p>
+            </div>
         </div>
-      </div>
-    </nav>
-  </header>
-  <br><br><br><br>
+        <div class="col size">
+            <div class="input-group card-body">
+                <span><p class="leb">Website name</p></span>
+                <p class="para">Website name</p>            </div>
+        </div>
+        <div class="col size">
+            <div class="input-group card-body">
+                <span><p class="leb">Website name</p></span>
+                <p class="para">Website name</p>
+            </div>
+        </div>
+        <div class="col size">
+            <div class="input-group card-body">
+                <span><p class="leb">Website name</p></span>
+                <p class="para">Website name</p>            </div>
+        </div>
+        
+    </div>
+</div>
 
 
 
-
-
-
-  <footer class="footer-distributed">
-      <div class="footer-right">
-        <a
-          href="https://www.facebook.com/people/Marwan-Alghadi/100010510052186/"
-          target="_blank" rel="noopener noreferrer"
-        >
-          <em class="fa fa-facebook"></em
-        ></a>
-        <a href="https://ly.linkedin.com/in/marwan-algadi-445a151a3" target="_blank" rel="noopener noreferrer">
-          <em class="fa fa-linkedin"></em
-        ></a>
-        <a href="https://github.com/Marwan1998/registration-manager" target="_blank" rel="noopener noreferrer">
-          <em class="fa fa-github"></em
-        ></a>
-      </div>
-      <div class="footer-left">
-        <p class="footer-links">
-          <a class="link-1" href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-        </p>
-        <p>Characters &copy; 2021</p>
-      </div>
+    <footer class="footer-distributed">
+        <div class="footer-right">
+            <a href="https://www.facebook.com/people/Marwan-Alghadi/100010510052186/" target="_blank"
+                rel="noopener noreferrer">
+                <em class="fa fa-facebook"></em></a>
+            <a href="https://ly.linkedin.com/in/marwan-algadi-445a151a3" target="_blank" rel="noopener noreferrer">
+                <em class="fa fa-linkedin"></em></a>
+            <a href="https://github.com/Marwan1998/registration-manager" target="_blank" rel="noopener noreferrer">
+                <em class="fa fa-github"></em></a>
+        </div>
+        <div class="footer-left">
+            <p class="footer-links">
+                <a class="link-1" href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </p>
+            <p>Characters &copy; 2021</p>
+        </div>
     </footer>
+
+    <script>
+        document.querySelectorAll("input").forEach((input, index) => {
+            input.className = "form-control";
+            input.type = "text";
+            input.name = input.id;
+            input.autocomplete = "off";
+            index <= 5 ? (input.required = "required") : null;
+            // if(index <= 5) input.required = 'required';
+        });
+        document
+            .querySelectorAll("span")
+            .forEach((span) => (span.className = "input-group-text bg-info"));
+    </script>
 </body>
 
 </html>
