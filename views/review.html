@@ -5,10 +5,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Find</title>
+    <title>Review</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
-    <!-- <link rel="stylesheet" href="/public/css/review.css"> -->
     <link rel="stylesheet" href="/public/css/general.css" />
     <link rel="stylesheet" href="/public/css/footer.css" />
     <link type="css" rel="stylesheet" href="/public/css/icons/" />
@@ -16,8 +15,7 @@
         .marg.footer-distributed {
             margin-top: 0;
         }
-
-        .leb {
+        .leb{
             margin-bottom: 0px;
             font-size: 17px;
             width: 110px;
@@ -25,14 +23,14 @@
         .size{
             width: 45%;
         }
-        .left{
-            margin-left: 0;
+        .margin{
+            margin-left: 0.4rem !important;
         }
-        .para{
-            /* margin-left: 7px !important; */
-            border: solid;
-            border-width: 1px 1px 1px 1px;
-            /* user-select: all; TODO: uncomment this lettar */
+        .layout{
+            justify-content: flex-end;
+        }
+        .selectAll{
+            user-select: all;
         }
     </style>
 </head>
@@ -42,11 +40,11 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light rounded selectNone"
             aria-label="Eleventh navbar example">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">RegMang</a>
+                <a class="navbar-brand" href="/views/home.html">RegMang</a>
                 <div class="collapse navbar-collapse" id="navbarsExample09">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="/views/home.html">Home</a>
                         </li>
                     </ul>
                     <li class="navbar-nav nav-item about">
@@ -64,33 +62,49 @@
     </header>
     <br/>
 
-<div class="container left">
-    <h2 class="text-center">Website Name</h2><br/>
-    <div class="row row-cols-1 row-cols-md-2">
+<div class="container p-0 d-grid">
+    <h2 class="text-center fst-italic fw-normal text-primary">GitHub</h2><br/>
+    <div class="row row-cols-1 row-cols-md-2 layout">
         <div class="col size">
             <div class="input-group card-body">
                 <span><p class="leb">Website name</p></span>
-                <p class="para">Website name</p>
+                <span>GitHub</span>
             </div>
         </div>
         <div class="col size">
             <div class="input-group card-body">
-                <span><p class="leb">Website name</p></span>
-                <p class="para">Website name</p>            </div>
-        </div>
-        <div class="col size">
-            <div class="input-group card-body">
-                <span><p class="leb">Website name</p></span>
-                <p class="para">Website name</p>
+                <span><p class="leb">Username</p></span>
+                <span class="">Marwan1998</span>            
             </div>
         </div>
         <div class="col size">
             <div class="input-group card-body">
-                <span><p class="leb">Website name</p></span>
-                <p class="para">Website name</p>            </div>
+                <span><p class="leb">Email</p></span>
+                <span class="">notyoubissness@gmail.com</span>
+            </div>
         </div>
-        
+        <div class="col size">
+            <div class="input-group card-body">
+                <span><p class="leb">Password</p></span>
+                <span class="">notyoubissness</span>            
+            </div>
+        </div>
+        <div class="col size">
+            <div class="input-group card-body">
+                <span><p class="leb">Country</p></span>
+                <span class="">Libya</span>            
+            </div>
+        </div>
+        <div class="col size">
+            <div class="input-group card-body">
+                <span><p class="leb">Phone</p></span>
+                <span class="">092-1110001</span>            
+            </div>
+        </div>
     </div>
+    <br/>
+    <a class="btn btn-outline-primary" href="/views/home.html" >Back Home</a>
+    <br/>
 </div>
 
 
@@ -116,17 +130,13 @@
     </footer>
 
     <script>
-        document.querySelectorAll("input").forEach((input, index) => {
-            input.className = "form-control";
-            input.type = "text";
-            input.name = input.id;
-            input.autocomplete = "off";
-            index <= 5 ? (input.required = "required") : null;
-            // if(index <= 5) input.required = 'required';
-        });
-        document
-            .querySelectorAll("span")
-            .forEach((span) => (span.className = "input-group-text bg-info"));
+         document
+            .querySelectorAll("span").forEach((span, index) =>{ 
+             if(index % 2 == 0)
+                span.className = "input-group-text bg-info margin";
+             else 
+                span.className = "input-group-text text-secondary margin selectAll";
+    });
     </script>
 </body>
 
