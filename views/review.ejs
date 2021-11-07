@@ -36,35 +36,14 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded selectNone"
-            aria-label="Eleventh navbar example">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/views/home.html">RegMang</a>
-                <div class="collapse navbar-collapse" id="navbarsExample09">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/views/home.html">Home</a>
-                        </li>
-                    </ul>
-                    <li class="navbar-nav nav-item about">
-                        <a class="nav-link" href="#">New</a>
-                    </li>
-                    <li class="navbar-nav nav-item about">
-                        <a class="nav-link" href="#">Find</a>
-                    </li>
-                    <li class="navbar-nav nav-item about">
-                        <a class="nav-link" href="#">Logout</a>
-                    </li>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <br/>
+
+<%- include('partials/navbar') %>    
+<br/>
 
 <div class="container p-0 d-grid">
     <h2 class="text-center fst-italic fw-normal text-primary">GitHub</h2><br/>
     <div class="row row-cols-1 row-cols-md-2 layout">
+        
         <div class="col size">
             <div class="input-group card-body">
                 <span><p class="leb">Website name</p></span>
@@ -101,43 +80,21 @@
                 <span class="">092-1110001</span>            
             </div>
         </div>
+
     </div>
     <br/>
     <a class="btn btn-outline-primary" href="/views/home.html" >Back Home</a>
     <br/>
 </div>
 
-
-
-    <footer class="footer-distributed">
-        <div class="footer-right">
-            <a href="https://www.facebook.com/people/Marwan-Alghadi/100010510052186/" target="_blank"
-                rel="noopener noreferrer">
-                <em class="fa fa-facebook"></em></a>
-            <a href="https://ly.linkedin.com/in/marwan-algadi-445a151a3" target="_blank" rel="noopener noreferrer">
-                <em class="fa fa-linkedin"></em></a>
-            <a href="https://github.com/Marwan1998/registration-manager" target="_blank" rel="noopener noreferrer">
-                <em class="fa fa-github"></em></a>
-        </div>
-        <div class="footer-left">
-            <p class="footer-links">
-                <a class="link-1" href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-            </p>
-            <p>Characters &copy; 2021</p>
-        </div>
-    </footer>
-
-    <script>
-         document
-            .querySelectorAll("span").forEach((span, index) =>{ 
-             if(index % 2 == 0)
-                span.className = "input-group-text bg-info margin";
-             else 
-                span.className = "input-group-text text-secondary margin selectAll";
+<script>
+     document
+        .querySelectorAll("span").forEach((span, index) =>{ 
+         if(index % 2 == 0)
+            span.className = "input-group-text bg-info margin";
+         else 
+            span.className = "input-group-text text-secondary margin selectAll";
     });
-    </script>
-</body>
+</script>
 
-</html>
+<%- include("partials/footer") -%>
