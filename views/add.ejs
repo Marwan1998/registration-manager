@@ -16,99 +16,69 @@
             margin-top: 0;
         }
 
-        .leb{
+        .leb {
             margin-bottom: 0px;
             font-size: 17px;
             width: 110px
         }
     </style>
 </head>
-
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded selectNone"
-            aria-label="Eleventh navbar example">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">RegMang</a>
-                <div class="collapse navbar-collapse" id="navbarsExample09">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                    </ul>
-                    <li class="navbar-nav nav-item about">
-                        <a class="nav-link" href="#">New</a>
-                    </li>
-                    <li class="navbar-nav nav-item about">
-                        <a class="nav-link" href="#">Find</a>
-                    </li>
-                    <li class="navbar-nav nav-item about">
-                        <a class="nav-link" href="#">Logout</a>
-                    </li>
-                </div>
-            </div>
-        </nav>
-    </header>
+
+<%- include('partials/navbar') %>
 
     <div class="text-center selectNone">
         <form id="formData" class="position-absolute top-50 start-50 translate-middle" method="POST">
             <div class="input-group mb-3">
-                <span><p class="leb">Website name</p></span>
-                <input id="webnam" placeholder="Website name"/>
+                <span>
+                    <p class="leb">Website name</p>
+                </span>
+                <input id="webnam" placeholder="Website name" />
             </div>
             <div class="input-group mb-3">
-                <span><p class="leb">Username</p></span>
-                <input id="name" placeholder="Username"/>
+                <span>
+                    <p class="leb">Username</p>
+                </span>
+                <input id="name" placeholder="Username" />
             </div>
             <div class="input-group mb-3">
-                <span><p class="leb">Email</p></span>
-                <input id="email" placeholder="Email Address"/>
+                <span>
+                    <p class="leb">Email</p>
+                </span>
+                <input id="email" placeholder="Email Address" />
             </div>
             <div class="input-group mb-3">
-                <span><p class="leb">Password</p></span>
-                <input id="pass" placeholder="Password"/>
+                <span>
+                    <p class="leb">Password</p>
+                </span>
+                <input id="pass" placeholder="Password" />
             </div>
             <div class="input-group mb-3">
-                <span><p class="leb">Country</p></span>
-                <input id="country" placeholder="Country Name"/>
+                <span>
+                    <p class="leb">Country</p>
+                </span>
+                <input id="country" placeholder="Country Name" />
             </div>
             <div class="input-group mb-3">
-                <span><p class="leb">Phone</p></span>
-                <input id="phone" placeholder="Phone Number"/>
+                <span>
+                    <p class="leb">Phone</p>
+                </span>
+                <input id="phone" placeholder="Phone Number" />
             </div>
             <br>
             <button type="submit" class="btn bg-primary btn-lg fitDiv" name="button">Add Register</button>
         </form>
     </div>
-
-    <footer class="footer-distributed">
-        <div class="footer-right">
-            <a href="https://www.facebook.com/people/Marwan-Alghadi/100010510052186/" target="_blank" rel="noopener noreferrer">
-                <em class="fa fa-facebook"></em></a>
-            <a href="https://ly.linkedin.com/in/marwan-algadi-445a151a3" target="_blank" rel="noopener noreferrer">
-                <em class="fa fa-linkedin"></em></a>
-            <a href="https://github.com/Marwan1998/registration-manager" target="_blank" rel="noopener noreferrer">
-                <em class="fa fa-github"></em></a>
-        </div>
-        <div class="footer-left">
-            <p class="footer-links">
-                <a class="link-1" href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-            </p>
-            <p>Characters &copy; 2021</p>
-        </div>
-    </footer>
     <script>
         document.querySelectorAll('input').forEach((input, index) => {
             input.className = "form-control";
             input.type = "text";
             input.name = input.id;
             input.autocomplete = "off";
-            (index <= 5) ? input.required = 'required' : null;
+            (index <= 5) ? input.required = 'required': null;
             // if(index <= 5) input.required = 'required';
         });
         document.querySelectorAll("span").forEach(span => span.className = "input-group-text bg-info");
     </script>
-</body>
-</html>
+
+<%- include("partials/footer") -%>
