@@ -9,7 +9,9 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           </ul>
           <li class="navbar-nav nav-item">
-            <a class="nav-link" href="#">Sign up</a>
+            <% let linkNam, href; %>
+            <% if(regOrSign == 'Login') {linkNam = 'Sign up'; href = '/register.ejs';} else {linkNam = 'Sign in'; href = '/login.ejs'}%>
+            <a class="nav-link" href="<%= href %>"><%= linkNam %></a>
           </li>
           <li class="navbar-nav nav-item">
             <a class="nav-link" href="#">About</a>
@@ -33,4 +35,3 @@
   </div>
 
 <%- include("partials/footer") -%>
-<!-- <h1><% regOrSign == 'Sign in' ? 'images/login.svg' : 'images/register.png' %></h1> -->
